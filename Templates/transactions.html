@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>All Transactions</title>
+</head>
+<body>
+  <h2>All Transactions</h2>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <table border="1">
+    <tr>
+      <th>ID</th>
+      <th>Amount</th>
+      <th>Category</th>
+      <th>Transaction Type</th>
+      <th>Merchant ID</th>
+      <th>Date</th>
+      <th>Day</th>
+      <th>Month</th>
+      <th>Time</th>
+    </tr>
+    {% for t in transactions %}
+    <tr>
+      <td>{{ t[0] }}</td>
+      <td>{{ t[1] }}</td>
+      <td>{{ t[2] }}</td>
+      <td>{{ t[3] }}</td>
+      <td>{{ t[4] }}</td>
+      <td>{{ t[5] }}</td>
+      <td>{{ t[6] }}</td>
+      <td>{{ t[7] }}</td>
+      <td>{{ t[8] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

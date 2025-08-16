@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Credit Card Fraud Detection</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">FraudDetect</div>
+      <ul class="nav-links">
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="#about">About</a></li>
+       <li><a href="{{ url_for('uploadfile') }}" class="active">Upload</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+  <!-- ======= Hero Section ======= -->
+  <section id="homesection" style="padding: 0px 0px">
+    <!--__________________________________ header-box______________________________________________ -->
+    <div id="header-container">
+      <h1 id="header2">CREDIT CARD DATASET ANALYSIS</h1>
+    </div>
+    <!-- ___________________________________main-division____________________________________________ -->
+
+    <div class="fraud-container" style="margin-bottom: 10px">
+      <div class="fraud-header-container">
+        <h3 class="fraud-header">Analysis of the Dataset</h3>
+      </div>
+      <div class="result-table1">
+        <table>
+          <tr>
+            <th>Algorithm Name</th>
+            <th>Accuracy Score</th>
+          </tr>
+          <tr>
+            <td>Data Shape</td>
+            <td>(1000, 20)</td>
+          </tr>
+          <tr>
+            <td>Unique Target Values</td>
+            <td>[0, 1]</td>
+          </tr>
+          <tr>
+            <td>Percentage of Non-Fraudulent Transactions:</td>
+            <td>98%</td>
+          </tr>
+          <tr>
+            <td>Percentage of Fraudulent Transactions:</td>
+            <td>2%</td>
+          </tr>
+          <tr>
+            <td>Null Values</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Total Fraudulent Transactions in Dataset</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td>Total Normal Transactions in Dataset</td>
+            <td>980</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="fraud-header-container">
+        <h3 class="fraud-header">
+          Credit Card Fraud Percentage according to dataset
+        </h3>
+      </div>
+    </div>
+  </section>
+  </main>
+   <footer>
+    <p>&copy; 2024 FraudDetect. All rights reserved.</p>
+  </footer>
+  </body>

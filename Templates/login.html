@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login - Credit Card Fraud Detection</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  
+
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">FraudDetect</div>
+      <ul class="nav-links">
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('index') }}#about">About</a></li>
+        <li><a href="{{ url_for('login') }}" class="active">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="login-section">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter your username" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required />
+
+        <button type="submit" class="btn-primary">Login</button>
+      </form>
+       <div class="not-registered">
+      <p>Not Registered? <a href="{{ url_for('register') }}">Create an account</a></p>
+    </div>
+    </section>
+  </main>
+  <script>
+  document.getElementById('loginForm')
+  .addEventListener('submit', function(event) {
+    event.preventDefault();
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    var user = localStorage.getItem(username);
+
+    if(user){
+      var parseduser = JSON.parse(user);
+      if(parseduser.password === password){
+        localStorage.setItem("user", JSON.stringify(parseduser));
+        alert("Login successful!");
+        window.location.href = "{{ url_for('uploadfile') }}";
+      }
+      else {
+        alert("Incorrect password!");
+      }
+    } else {
+      alert("User not found! Please register first.");
+      window.location.href = "{{ url_for('register') }}";
+    }
+  });
+</script>
+  <footer>
+    <p>&copy; 2024 FraudDetect. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
