@@ -1,0 +1,257 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f7fb;
+  color: #2c3e50;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navigation bar */
+header {
+  background-color: #34495e;
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-links li a {
+  color: #ecf0f1;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.nav-links li a:hover,
+.nav-links li a.active {
+  background-color: #2980b9;
+  color: #fff;
+}
+
+/* Main content */
+main {
+  flex-grow: 1;
+  max-width: 1100px;
+  width: 90%;
+  margin: 2rem auto 3rem auto;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #2980b9, #6dd5fa);
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  padding: 4rem 1.5rem;
+  box-shadow: 0 10px 20px rgba(41, 128, 185, 0.3);
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #5f2c82;
+}
+.hero p {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.5;
+  color: #5f2c82;
+}
+.btn-primary {
+  background: #2980b9;
+  color: white;
+  padding: 0.85rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: #216a9d;
+}
+
+/* About Section */
+.about-section {
+  background-color: #e0c3fc;
+  padding: 2rem 2rem;
+  margin-top: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.07);
+}
+.about-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #34495e;
+  color: #5f2c82;
+}
+.about-section p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Login Section */
+.login-section {
+  background-color: white;
+  margin-top: 3rem;
+  padding: 2rem 2rem;
+  border-radius: 10px;
+  border-color: #e0c3fc;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.07);
+}
+.login-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+   color: #5f2c82;
+}
+.login-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+ border-color: #e0c3fc;
+}
+.login-section label {
+  font-weight: 600;
+  color: #34495e;
+}
+.login-section input {
+  padding: 0.75rem 1rem;
+  border: 1.5px solid #e0c3fc;
+  border: 1.5px solid ;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+.login-section input:focus {
+  outline: none;
+  border-color:  #e0c3fc;
+}
+.login-section button {
+  margin-top: 1rem;
+  background-color: #2980b9;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.85rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.login-section button:hover {
+  background-color: #216a9d;
+}
+.not-registered {
+  text-align: center;
+  margin-top: 1.2rem;
+  font-size: 1rem;
+}
+.not-registered a {
+  color: #5f2c82;
+  text-decoration: underline;
+  font-weight: 500;
+}
+.not-registered a:hover {
+  color: #49a09d;
+}
+
+
+/* Result Page Styles */
+.result-section {
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  max-width: 400px;
+  margin: 4rem auto 2rem auto;
+  padding: 2.5rem 2rem 2rem 2rem;
+  text-align: center;
+  border: 1.5px solid #e0c3fc;
+}
+.result-section h2 {
+  color: #2980b9;
+  font-size: 2.2rem;
+  margin-bottom: 1.2rem;
+  letter-spacing: 1px;
+}
+.result-section p {
+  font-size: 1.3rem;
+  color: #34495e;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+.result-section a {
+  display: inline-block;
+  background: #2980b9;
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+.result-section a:hover {
+  background: #216a9d;
+}
+
+/* Footer */
+footer {
+  background-color: #34495e;
+  color: #ecf0f1;
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  main {
+    width: 95%;
+  }
+  .login-section {
+    max-width: 100%;
+  }
+  .nav-links {
+    gap: 1rem;
+  }
+}
